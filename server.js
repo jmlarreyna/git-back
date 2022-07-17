@@ -29,6 +29,12 @@ app.get("/", async (req, res) => {
   });
 });
 
+app.get("/adoptantes", async (req, res) => {
+  res.json({
+    adoptante: await AdoptanteController.findAll(),
+  });
+});
+
 app.get("/search/:input", async (req, res) => {
   const { input } = req.params;
   const buscador = await PerroController.searchPerros(input)
