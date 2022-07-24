@@ -48,7 +48,7 @@ app.post("/crear", async (req, res) => {
 
 app.post("/formulario", async (req, res) => {
   await AdoptanteController.create(req.body);
-  res.json("Formulario cargado y guardado en DB");
+  res.json("Formulario cargado y guardado en DB!");
 });
 
 app.listen(PORT, () => {
