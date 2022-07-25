@@ -8,12 +8,6 @@ const connection = mongoose.connect(URL, {
     useUnifiedTopology: true,
 });
 
-//Sin usar
-const connectionDos = mongoose.connect(URL, {
-    useNewUrlParser: true, 
-    useUnifiedTopology: true, 
-    //serverApi: ServerApiVersion.v1,
-});
 
 mongoose.connection.on('connected', () => {
     console.log('[Mongoose] - conectado a MongoDB');
